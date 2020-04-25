@@ -1,12 +1,20 @@
 import React from 'react';
 import './Avatar.css';
+import 'tachyons';
+import Avatarlist from './Avatarlist';
 
 const Avatar = () => {
     return(
-        <div className="avatarstyle">
-            <img src= "https://joeschmoe.io/api/v1/ashu" alt="ashu"></img>
-            <h1>ashu</h1>
-            <p>Web dev</p>
+        <div>
+            <h1 className="tc">Welcome to the Avatar</h1>
+            <div>
+                <Avatarlist id="1" name="Ashu" work="web dev" />
+                <Avatarlist id="1" name="kmr.tosh" work="mob dev" />
+                <Avatarlist id="1" name="kumar Ash" work="ios dev" />
+                <Avatarlist id="1" name="kepler" work="devOps" />
+
+            </div>
+            <button>Submit</button>
         </div>
     )
 }
