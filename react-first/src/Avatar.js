@@ -3,17 +3,36 @@ import './Avatar.css';
 import 'tachyons';
 import Avatarlist from './Avatarlist';
 
-const Avatar = () => {
+const Avatar = (props) => {
+    const avatararray = [
+        {
+            name:"Ashu", 
+            work:"web dev"
+        },
+        {
+            name:"kmr.tosh",
+            work:"mob dev"
+        },
+        {
+            name:"kumar Ash",
+             work:"ios dev"
+        },
+        {
+            name:"kepler",
+            work:"devOps"
+        }
+    ]
+
+    const arrayavatarcard = avatararray.map( (avatarcard, i) => {
+        return < Avatarlist
+            name={avatararray[i].name}
+            work={avatararray[i].work} />
+    })
+
     return(
         <div>
             <h1 className="tc">Welcome to the Avatar</h1>
-            <div>
-                <Avatarlist id="1" name="Ashu" work="web dev" />
-                <Avatarlist id="1" name="kmr.tosh" work="mob dev" />
-                <Avatarlist id="1" name="kumar Ash" work="ios dev" />
-                <Avatarlist id="1" name="kepler" work="devOps" />
-
-            </div>
+            <div>{arrayavatarcard}</div>
             <button>Submit</button>
         </div>
     )
